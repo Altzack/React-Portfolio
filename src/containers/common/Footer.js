@@ -9,9 +9,9 @@ const FooterSeparator = styled.span`
 
 const FooterContainer = styled.div`
   width: 100%;
-  color: #000;
-  background-color: #eee;
+  color: #fff;
   margin-top: 48px;
+  background-color: rgb(27, 28, 29);
 `;
 
 const FooterContentContainer = styled.div`
@@ -32,7 +32,7 @@ export default function Footer() {
     <FooterContainer>
       <FooterContentContainer mobile={isTabletOrMobile}>
         <div>
-          Boozy
+          Covid Stats
           <FooterSeparator>|</FooterSeparator>
           Created by <i>Zack 2020</i>
         </div>

@@ -17,7 +17,8 @@ const AppHeaderContainer = styled.div`
   font-family: Rubik;
   z-index: 99;
   /*background-color: #ff294a;*/
-  background-color: white;
+  color: #fff;
+  background-color: rgb(27, 29, 30);
 `;
 
 const FooterSeparator = styled.span`
@@ -30,7 +31,7 @@ const HeaderSection = styled.div`
   display: flex;
   align-items: center;
   width: 33%;
-  color: #364966;
+  color: #fff;
 `;
 
 const HeaderContentContainer = styled.div`
@@ -45,7 +46,7 @@ const HeaderContentContainer = styled.div`
 `;
 
 const StyledHeader = styled.h3`
-  color: #364966;
+  color: #fff;
   margin-bottom: 0;
   :hover {
     color: #1890ff;
@@ -53,7 +54,7 @@ const StyledHeader = styled.h3`
 `;
 
 const StyledTitle = styled.h1`
-  color: #364966;
+  color: #fff;
   margin-bottom: 0;
   letter-spacing: 3px;
   font-family: Rubik;
@@ -82,21 +83,16 @@ export default function Header() {
         <HeaderContentContainer>
           <HeaderSection style={{ justifyContent: 'flex-start' }}>
             <Link style={{ textDecoration: 'none', color: '#000' }} to="/">
-              <StyledHeader>About</StyledHeader>
+              <StyledHeader></StyledHeader>
             </Link>
-            <FooterSeparator>|</FooterSeparator>
-            <Link style={{ textDecoration: 'none', color: '#000' }} to="/">
-              <StyledHeader>Foo</StyledHeader>
-            </Link>
+            <FooterSeparator></FooterSeparator>
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'center' }}>
             <LogoLink to="/">
-              <StyledTitle>Untitled</StyledTitle>
+              <StyledTitle>Covid Stats</StyledTitle>
             </LogoLink>
           </HeaderSection>
-          <HeaderSection style={{ justifyContent: 'flex-end' }}>
-            hi
-          </HeaderSection>
+          <HeaderSection style={{ justifyContent: 'flex-end' }}></HeaderSection>
         </HeaderContentContainer>
       </DesktopOnly>
       <MobileOnly>

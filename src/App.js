@@ -14,13 +14,15 @@ import Footer from './containers/common/Footer';
 import Header from './containers/common/Header';
 import AppContext from './AppContext';
 import LandingPage from './containers/LandingPage/LandingPage';
+import config from './config';
+import { message } from 'antd';
 
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   color: rgba(232, 230, 227, 0.85);
-  background-color: rgba(250, 250, 250);
+  background-color: rgb(27, 29, 30);
   ${({ isMobile }) => isMobile && 'overflow-x: hidden;'}
   max-width: 100%;
 `;
@@ -43,8 +45,45 @@ const AppWrapper = withRouter(({ children }) => {
 });
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      covidData: [],
+    };
+  }
+
+  setCovidData = (data) => {
+    this.setState({
+      covidData: data,
+    });
+  };
+
+  getCovidData = () => {
+    fetch(`${config.API_ENDPOINT}/states.json?apiKey=${config.API_KEY}`, {
+      method: 'GET',
+      headers: {},
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(res.status);
+        }
+        return res.json();
+      })
+      .then(this.setCovidData)
+      .catch((err) => {
+        message.error(`Please try again later: ${err}`);
+      });
+  };
+
+  componentDidMount = () => {
+    this.getCovidData();
+  };
+
   render() {
-    const contextValues = {};
+    const contextValues = {
+      covidData: this.state.covidData || [],
+    };
+
     return (
       <AppContext.Provider value={contextValues}>
         <>
