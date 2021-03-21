@@ -90,7 +90,7 @@ export default function Header() {
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'center' }}>
             <LogoLink to="/">
-              <StyledTitle>Covid Stats</StyledTitle>
+              <StyledTitle>title</StyledTitle>
             </LogoLink>
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'flex-end' }}></HeaderSection>
