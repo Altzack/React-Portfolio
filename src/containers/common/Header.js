@@ -77,6 +77,7 @@ export default function Header() {
   const onClose = () => {
     setVisible(false);
   };
+
   return (
     <AppHeaderContainer>
       <DesktopOnly>
