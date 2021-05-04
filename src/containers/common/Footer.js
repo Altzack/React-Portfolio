@@ -29,10 +29,10 @@ export default function Footer() {
   const { isTabletOrMobile } = useResponsive();
 
   return (
-    <FooterContainer>
+    <FooterContainer id="contact">
       <FooterContentContainer mobile={isTabletOrMobile}>
         <div>
-          Covid Stats
+          Zack Altschuler Portfolio
           <FooterSeparator>|</FooterSeparator>
           Created by <i>Zack 2020</i>
         </div>

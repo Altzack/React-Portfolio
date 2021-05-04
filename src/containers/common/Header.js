@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Drawer, Button } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
+import { BiCodeAlt } from 'react-icons/bi';
 import { DesktopOnly, MobileOnly } from './responsiveComponents';
 import 'antd/dist/antd.css';
 import '../../App.css';
@@ -18,7 +19,7 @@ const AppHeaderContainer = styled.div`
   z-index: 99;
   /*background-color: #ff294a;*/
   color: #fff;
-  background-color: rgb(27, 29, 30);
+  background-color: rgb(24, 26, 27);
 `;
 
 const FooterSeparator = styled.span`
@@ -84,22 +85,29 @@ export default function Header() {
         <HeaderContentContainer>
           <HeaderSection style={{ justifyContent: 'flex-start' }}>
             <Link style={{ textDecoration: 'none', color: '#000' }} to="/">
-              <StyledHeader></StyledHeader>
+              <StyledHeader />
             </Link>
-            <FooterSeparator></FooterSeparator>
+            <FooterSeparator />
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'center' }}>
             <LogoLink to="/">
-              <StyledTitle>title</StyledTitle>
+              <StyledTitle />
             </LogoLink>
           </HeaderSection>
-          <HeaderSection style={{ justifyContent: 'flex-end' }}></HeaderSection>
+          <HeaderSection style={{ justifyContent: 'flex-end' }} />
         </HeaderContentContainer>
       </DesktopOnly>
       <MobileOnly>
         <HeaderContentContainer>
-          <HeaderSection style={{ justifyContent: 'flex-start' }}>
-            <Button
+          <HeaderSection
+            style={{
+              justifyContent: 'flex-start',
+              fontSize: 25,
+              marginLeft: 10,
+              fontWeight: 600,
+            }}
+          >
+            {/* <Button
               style={{
                 borderColor: 'transparent',
                 backgroundColor: 'transparent',
@@ -109,15 +117,20 @@ export default function Header() {
               onClick={showDrawer}
             >
               <MenuOutlined />
-            </Button>
+            </Button> */}
+            <BiCodeAlt />
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'center' }}>
             <LogoLink to="/">
-              <StyledTitle>Untitled</StyledTitle>
+              <StyledTitle />
             </LogoLink>
           </HeaderSection>
-          <HeaderSection style={{ justifyContent: 'flex-end' }}>
-            hi
+          <HeaderSection
+            style={{ justifyContent: 'space-evenly', width: '100%' }}
+          >
+            <a href="#aboutme">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
           </HeaderSection>
         </HeaderContentContainer>
         <Drawer

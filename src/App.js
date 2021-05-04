@@ -1,6 +1,6 @@
 import './App.css';
 import styled from 'styled-components/macro';
-import React, { Component } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,15 +14,13 @@ import Footer from './containers/common/Footer';
 import Header from './containers/common/Header';
 import AppContext from './AppContext';
 import LandingPage from './containers/LandingPage/LandingPage';
-import config from './config';
-import { message } from 'antd';
 
 const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   color: rgba(232, 230, 227, 0.85);
-  background-color: rgb(27, 29, 30);
+  background-color: rgb(24, 26, 27);
   ${({ isMobile }) => isMobile && 'overflow-x: hidden;'}
   max-width: 100%;
 `;
@@ -44,67 +42,27 @@ const AppWrapper = withRouter(({ children }) => {
   );
 });
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      covidData: [],
-    };
-  }
-
-  setCovidData = (data) => {
-    this.setState({
-      covidData: data,
-    });
-  };
-
-  getCovidData = () => {
-    fetch(`${config.API_ENDPOINT}/states.json?apiKey=${config.API_KEY}`, {
-      method: 'GET',
-      headers: {},
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error(res.status);
-        }
-        return res.json();
-      })
-      .then(this.setCovidData)
-      .catch((err) => {
-        message.error(`Please try again later: ${err}`);
-      });
-  };
-
-  componentDidMount = () => {
-    this.getCovidData();
-  };
-
-  render() {
-    const contextValues = {
-      covidData: this.state.covidData || [],
-    };
-
-    return (
-      <AppContext.Provider value={contextValues}>
-        <>
-          <Router>
-            <QueryParamProvider ReactRouterRoute={Route}>
-              <AppWrapper>
-                <Switch>
-                  <Route exact path="/">
-                    <LandingPage />
-                  </Route>
-                  <Route>
-                    <FourOhFour />
-                  </Route>
-                </Switch>
-              </AppWrapper>
-            </QueryParamProvider>
-          </Router>
-        </>
-      </AppContext.Provider>
-    );
-  }
-}
+const App = () => {
+  return (
+    <AppContext.Provider>
+      <>
+        <Router>
+          <QueryParamProvider ReactRouterRoute={Route}>
+            <AppWrapper>
+              <Switch>
+                <Route exact path="/">
+                  <LandingPage />
+                </Route>
+                <Route>
+                  <FourOhFour />
+                </Route>
+              </Switch>
+            </AppWrapper>
+          </QueryParamProvider>
+        </Router>
+      </>
+    </AppContext.Provider>
+  );
+};
 
 export default App;
