@@ -83,18 +83,29 @@ export default function Header() {
     <AppHeaderContainer>
       <DesktopOnly>
         <HeaderContentContainer>
-          <HeaderSection style={{ justifyContent: 'flex-start' }}>
-            <Link style={{ textDecoration: 'none', color: '#000' }} to="/">
-              <StyledHeader />
-            </Link>
-            <FooterSeparator />
+          <HeaderSection
+            style={{
+              justifyContent: 'flex-start',
+              fontSize: 25,
+              marginLeft: 10,
+              fontWeight: 600,
+              color: '#1890ff',
+            }}
+          >
+            <BiCodeAlt />
           </HeaderSection>
           <HeaderSection style={{ justifyContent: 'center' }}>
             <LogoLink to="/">
               <StyledTitle />
             </LogoLink>
           </HeaderSection>
-          <HeaderSection style={{ justifyContent: 'flex-end' }} />
+          <HeaderSection
+            style={{ justifyContent: 'space-evenly', width: '100%' }}
+          >
+            <a href="#aboutme">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </HeaderSection>
         </HeaderContentContainer>
       </DesktopOnly>
       <MobileOnly>
@@ -105,6 +116,7 @@ export default function Header() {
               fontSize: 25,
               marginLeft: 10,
               fontWeight: 600,
+              color: '#1890ff',
             }}
           >
             {/* <Button

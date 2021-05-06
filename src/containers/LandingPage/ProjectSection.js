@@ -34,7 +34,7 @@ export default function ProjectSection() {
         title={data.title}
         cover={<img src={data.img} style={{}} alt="img" />}
         bordered={false}
-        headStyle={{ color: '#27bdfd', fontSize: 18 }}
+        headStyle={{ color: '#1890ff', fontSize: 18 }}
       >
         <div>
           {/* <img
@@ -50,14 +50,19 @@ export default function ProjectSection() {
         </div>
         <Divider style={{ borderColor: '#313537' }} />
         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-          <Button target="_blank" href={data.appLink} type="link">
+          <Button
+            target="_blank"
+            href={data.appLink}
+            type="ghost"
+            style={{ borderColor: '#1890ff' }}
+          >
             Live link
           </Button>
           <Button
             target="_blank"
             href={data.repoLink}
-            type="link"
-            style={{ marginLeft: 10 }}
+            type="ghost"
+            style={{ marginLeft: 10, borderColor: '#1890ff' }}
           >
             Repo
           </Button>
