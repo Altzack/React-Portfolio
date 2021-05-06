@@ -10,7 +10,7 @@ const HeadCon = styled.div`
 `;
 
 function LandingPage() {
-  const { Title, Paragraph, Text, Link } = Typography;
+  const { Title, Paragraph } = Typography;
   const small = useIsSmallScreen();
   return (
     <div
@@ -107,8 +107,10 @@ function LandingPage() {
           <div style={{ maxWidth: 650 }}>
             <Divider style={{ borderColor: '#fff', margin: 10 }} />
           </div>
-          <div style={{ maxWidth: 1200 }}>
-            <ProjectSection />
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div style={{ maxWidth: 1250 }}>
+              <ProjectSection />
+            </div>
           </div>
         </div>
       </Typography>

@@ -1,8 +1,7 @@
 import styled from 'styled-components/macro';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Drawer, Button } from 'antd';
-import { MenuOutlined } from '@ant-design/icons';
+import { Drawer } from 'antd';
 import { BiCodeAlt } from 'react-icons/bi';
 import { DesktopOnly, MobileOnly } from './responsiveComponents';
 import 'antd/dist/antd.css';
@@ -20,12 +19,6 @@ const AppHeaderContainer = styled.div`
   /*background-color: #ff294a;*/
   color: #fff;
   background-color: rgb(24, 26, 27);
-`;
-
-const FooterSeparator = styled.span`
-  padding: 0 10px;
-  margin-top: 2px;
-  color: #364966;
 `;
 
 const HeaderSection = styled.div`
@@ -46,14 +39,6 @@ const HeaderContentContainer = styled.div`
   height: 44px;
 `;
 
-const StyledHeader = styled.h3`
-  color: #fff;
-  margin-bottom: 0;
-  :hover {
-    color: #1890ff;
-  }
-`;
-
 const StyledTitle = styled.h1`
   color: #fff;
   margin-bottom: 0;
@@ -70,10 +55,6 @@ const LogoLink = styled(Link)`
 
 export default function Header() {
   const [visible, setVisible] = useState(false);
-
-  const showDrawer = () => {
-    setVisible(true);
-  };
 
   const onClose = () => {
     setVisible(false);

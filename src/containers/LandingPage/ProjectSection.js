@@ -11,6 +11,7 @@ const StyledCard = styled(Card)`
   margin-top: 10px;
   @media (min-width: 760px) {
     width: 450px;
+    padding: 30px;
   }
 `;
 
@@ -67,6 +68,7 @@ export default function ProjectSection() {
             Repo
           </Button>
         </div>
+        <Divider style={{ borderColor: '#313537' }} />
       </StyledCard>
     );
   });
