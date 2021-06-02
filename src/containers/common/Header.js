@@ -55,7 +55,6 @@ const LogoLink = styled(Link)`
 
 export default function Header() {
   const [visible, setVisible] = useState(false);
-
   const onClose = () => {
     setVisible(false);
   };
@@ -67,7 +66,7 @@ export default function Header() {
           <HeaderSection
             style={{
               justifyContent: 'flex-start',
-              fontSize: 25,
+              fontSize: 30,
               marginLeft: 10,
               fontWeight: 600,
               color: '#1890ff',
@@ -81,7 +80,11 @@ export default function Header() {
             </LogoLink>
           </HeaderSection>
           <HeaderSection
-            style={{ justifyContent: 'space-evenly', width: '100%' }}
+            style={{
+              justifyContent: 'space-evenly',
+              width: '100%',
+              fontSize: 16,
+            }}
           >
             <a href="#aboutme">About</a>
             <a href="#projects">Projects</a>

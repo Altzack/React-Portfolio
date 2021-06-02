@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Typography } from 'antd';
+import { Typography } from 'antd';
 import styled from 'styled-components/macro';
 import ProjectSection from './ProjectSection';
 import { useIsSmallScreen } from '../common/responsiveComponents';
@@ -26,7 +26,7 @@ function LandingPage() {
               <Title
                 level={small ? 2 : ''}
                 style={{
-                  color: 'rgb(252, 252, 252)',
+                  color: '#1890ff',
                   marginBottom: 10,
                   textAlign: 'center',
                 }}
@@ -64,6 +64,7 @@ function LandingPage() {
                   color: 'rgb(252, 252, 252)',
                   textAlign: 'center',
                   marginTop: small ? 60 : 0,
+                  marginBottom: 0,
                 }}
               >
                 About Me
@@ -73,6 +74,7 @@ function LandingPage() {
                   color: 'rgb(252, 252, 252)',
                   maxWidth: 550,
                   padding: 20,
+                  fontSize: !small && 16,
                 }}
               >
                 Full-stack web developer with a focus on frontend development.
@@ -86,7 +88,7 @@ function LandingPage() {
               </Paragraph>
             </div>
           </HeadCon>
-          <div
+          {/* <div
             style={{
               display: 'flex',
               justifyContent: small ? 'center' : 'flex-start',
@@ -105,10 +107,15 @@ function LandingPage() {
             </Title>
           </div>
           <div style={{ maxWidth: 650 }}>
-            <Divider style={{ borderColor: '#fff', margin: 10 }} />
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <div style={{ maxWidth: 1250 }}>
+            <Divider style={{ borderColor: '#fff' }} />
+          </div> */}
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: small ? 'center' : '',
+            }}
+          >
+            <div style={{}}>
               <ProjectSection />
             </div>
           </div>
