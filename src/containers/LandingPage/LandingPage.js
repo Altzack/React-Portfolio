@@ -78,13 +78,12 @@ function LandingPage() {
                 }}
               >
                 Full-stack web developer with a focus on frontend development.
-                I'm driven by creating a unique and engaging experience that
-                users will remember. My passion to innovate and automate drives
-                me to continue learning new technologies such as React, GraphQL,
-                JavaScript (es5, es6). Aside from software development, I love
-                fitness, music and cooking. I look forward to meeting and
-                working with like-minded developers to create the future of web
-                applications.
+                I'm passionate about creating a unique and engaging experience
+                that users will remember. I enjoy learning new technologies such
+                as React, GraphQL, JavaScript (es5, es6). Aside from software
+                development, I love fitness, music and cooking. I look forward
+                to meeting and working with like-minded developers to create the
+                future of web applications.
               </Paragraph>
             </div>
           </HeadCon>
