@@ -15,7 +15,7 @@ function LandingPage() {
   return (
     <div
       style={{
-        backgroundColor: 'rgb(24, 26, 27)',
+        backgroundColor: 'rgb(20, 21, 22)',
         color: 'rgb(252, 252, 252)',
       }}
     >
@@ -72,7 +72,8 @@ function LandingPage() {
               <Paragraph
                 style={{
                   color: 'rgb(252, 252, 252)',
-                  maxWidth: 550,
+                  maxWidth: 650,
+                  width: small && '100%',
                   padding: 20,
                   fontSize: !small && 16,
                 }}

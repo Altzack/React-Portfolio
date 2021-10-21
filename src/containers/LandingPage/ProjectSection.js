@@ -6,13 +6,13 @@ import projects from '../../Projects';
 import { useIsSmallScreen } from '../common/responsiveComponents';
 
 const StyledCard = styled(Card)`
-  background-color: rgb(25, 26, 27);
+  background-color: #181a1b;
   color: rgb(252, 252, 252);
   width: 340px;
-  margin-top: 10px;
+  margin-top: 12px;
+  margin-bottom: 12px;
   @media (min-width: 760px) {
     width: 700px;
-    padding: 30px;
   }
 `;
 
@@ -41,7 +41,7 @@ export default function ProjectSection() {
           <img src={data.img} style={{ height: small ? 200 : 350 }} alt="img" />
         }
         bordered={false}
-        headStyle={{ color: '#1890ff', fontSize: 22 }}
+        headStyle={{ color: 'rgb(252, 252, 252)', fontSize: 22 }}
       >
         <div>
           {/* <img
@@ -81,16 +81,16 @@ export default function ProjectSection() {
 
   return (
     <div>
-      <div style={{}}>
+      <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
         <div
           style={{
             display: 'flex',
             justifyContent: 'center',
             flexDirection: 'column',
-            maxWidth: 800,
+            width: '85%',
           }}
         >
-          <div style={{ textAlign: small && 'center' }}>
+          <div style={{ textAlign: small ? 'center' : 'left' }}>
             <Title
               level={small ? 2 : ''}
               id="projects"
@@ -104,7 +104,7 @@ export default function ProjectSection() {
               Projects
             </Title>
           </div>
-          <Divider style={{ borderColor: '#fff' }} />
+          <Divider style={{ borderColor: '#303436' }} />
         </div>
       </div>
       <PageCon>
