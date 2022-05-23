@@ -5,8 +5,10 @@ import ProjectSection from './ProjectSection';
 import { useIsSmallScreen } from '../common/responsiveComponents';
 
 const HeadCon = styled.div`
-  margin-top: 10;
-  ${({ mobile }) => mobile && 'display: flex; justify-content: space-evenly;'};
+  flex-direction: column;
+  ${({ mobile }) =>
+    mobile &&
+    'display: flex; justify-content: space-evenly; flex-direction: row;'};
 `;
 
 function LandingPage() {
