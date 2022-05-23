@@ -52,10 +52,14 @@ export default function ProjectSection() {
         </div>
         <div>{data.desc}</div>
         <Divider style={{ borderColor: '#313537' }} />
-        <div>
-          <span style={{ fontWeight: 600 }}>Tech used:</span> {data.langs}
-        </div>
-        <Divider style={{ borderColor: '#313537' }} />
+        {data.langs && (
+          <>
+            <div>
+              <span style={{ fontWeight: 600 }}>Tech used:</span> {data.langs}
+            </div>
+            <Divider style={{ borderColor: '#313537' }} />
+          </>
+        )}
         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
           <Button
             target="_blank"
@@ -65,16 +69,17 @@ export default function ProjectSection() {
           >
             Live link
           </Button>
-          <Button
-            target="_blank"
-            href={data.repoLink}
-            type="ghost"
-            style={{ marginLeft: 10, borderColor: '#1890ff' }}
-          >
-            Repo
-          </Button>
+          {data.repoLink && (
+            <Button
+              target="_blank"
+              href={data.repoLink}
+              type="ghost"
+              style={{ marginLeft: 10, borderColor: '#1890ff' }}
+            >
+              Repo
+            </Button>
+          )}
         </div>
-        <Divider style={{ borderColor: '#313537' }} />
       </StyledCard>
     );
   });

@@ -1,12 +1,10 @@
 const projects = [
   {
-    title: 'Speedrun Bounties',
+    title: 'GlassPass',
     desc:
-      'Discover, Create, and Compete in crowdsourced video game Bounties for cash prizes. This is a start up company founded by my cousin, Kevin Altschuler, that I am currently working for.',
-    img: 'images/speedrunB.png',
-    langs: 'React, GraphQL, Typescript',
-    repoLink: 'https://github.com/kevinaltschuler/bounties',
-    appLink: 'https://speedrunbounties.gg/',
+      'Buy, Sell, & Auction Glass Art on GlassPass (now with Crypto!) | The Most Trusted Glass Marketplace. My current job',
+    img: 'images/glasspass1.png',
+    appLink: 'https://glasspass.co/',
   },
   {
     title: 'CryptoTrack',
