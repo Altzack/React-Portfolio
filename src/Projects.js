@@ -23,6 +23,7 @@ const projects = [
   //   repoLink: 'https://github.com/Altzack/Covid-Tracker',
   //   appLink: 'https://covidtrack1.netlify.app/',
   // },
+
   {
     title: 'Boozy',
     desc:
